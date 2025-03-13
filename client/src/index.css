@@ -11,6 +11,7 @@
 
 /* //navbar css */
 .navbar {
+  
   font-family: "Poppins", sans-serif;
   font-size: 17px;
   line-height: 26px;
@@ -20,19 +21,36 @@
   border-bottom: solid gray !important;
 }
 
+.navbar {
+  background-color: #5aa018; /* Change this to your desired color */
+  color: white; /* Ensures text is visible */
+  background: linear-gradient(to right, #abeb0ba4, #75e439);
+
+}
+
+
 .nav-link {
+  color: rgb(187, 5, 5);
   font-weight: 300 !important;
 }
 
 .active {
+  
   border-bottom: 2px solid black;
 }
 
 .navbar-brand {
+  color: rgb(101, 13, 184);
   font-weight:bold;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   letter-spacing: 3px;
 }
+
+.navbar-brand:hover{
+  color: #5aa018;
+}
+
+
 
 .search-form {
   margin-right: 10px;
