@@ -1,14 +1,14 @@
 import React from 'react'
 import { Layout } from '../components/Layout/Layout'
 import { BiMailSend, BiPhoneCall, BiSupport } from "react-icons/bi";
-
+import contact from "../images/contact.jpg"
 export const Contact = () => {
   return (
     <Layout title={"Contact us"}>
       <div className="row contactus ">
         <div className="col-md-6 ">
           <img
-            src="/images/contactus.jpeg"
+            src={contact}
             alt="contactus"
             style={{ width: "100%" }}
           />
