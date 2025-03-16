@@ -1,0 +1,94 @@
+/* General Styling */
+.form-container {
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    flex-direction: column;
+    background: linear-gradient(135deg, #c7ff9a, #fad0c4, #fad0c4, #ffdde1);
+    padding: 20px;
+}
+
+/* Form Styling */
+.form-container form {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Form Title */
+.form-container form .title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: "Playfair Display", serif;
+    color: #333;
+}
+
+/* Input Fields */
+.form-container form input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ff758c;
+    background: transparent;
+    font-size: 16px;
+    outline: none;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-container form input:focus {
+    border-bottom: 2px solid #ff4e50;
+}
+
+/* Submit Button */
+.form-container form button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-container form button:hover {
+    background: linear-gradient(to right, #ff4e50, #ff758c);
+    transform: scale(1.05);
+}
+
+/* Forgot Password Button */
+.forgot-btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: black !important;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.forgot-btn:hover {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    color: #ff4e50 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .form-container form {
+        max-width: 90%;
+        padding: 20px;
+    }
+}
