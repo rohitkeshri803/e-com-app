@@ -7,12 +7,14 @@ import { Policy } from './pages/Policy';
 import { Register } from "./pages/Auth/Register";
 import { ToastContainer } from 'react-toastify';
 import { Login } from "./pages/Auth/Login";
+import { Dashboard } from "./pages/user/Dashboard";
 
 function App() {
   return (
     <BrowserRouter>  {/* ✅ Wrap Routes inside BrowserRouter */}
       <Routes>
         <Route path='/' element={<HomePage />} />
+        <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/policy' element={<Policy />} />
