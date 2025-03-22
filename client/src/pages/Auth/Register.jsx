@@ -24,6 +24,7 @@ export const Register = () => {
         password,
         phone,
         address,
+        answer
       });
       if (res && res.data.success) {
         toast.success(res.data && res.data.message);
@@ -121,6 +122,21 @@ export const Register = () => {
               placeholder="Enter your address"
               required
               
+            />
+          </div>
+
+          <div className="mb-3">
+          <label htmlFor="exampleInputPassword1" className="form-label">
+          What is Your Favorite sports
+            </label>
+            <input
+              type="text"
+              value={answer}
+              onChange={(e) => setAnswer(e.target.value)}
+              className="form-control"
+              id="exampleInputEmail1"
+              placeholder="Enter your favourite sports"
+              required
             />
           </div>
 
