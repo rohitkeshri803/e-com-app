@@ -17,7 +17,6 @@ An end-to-end MERN (MongoDB, Express, React, Node.js) stack based e-commerce app
 - Secure admin dashboard
 - Create, update, delete products and categories
 - Manage users and orders
-- Real-time analytics (coming soon)
 
 ---
 
