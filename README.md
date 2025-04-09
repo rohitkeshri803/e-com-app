@@ -1,6 +1,6 @@
 # 🛒 E-Commerce App
 
-An end-to-end MERN (MongoDB, Express, React, Node.js) stack based e-commerce application with full user authentication, product management, cart, payment gateway integration, and admin dashboard.
+An end-to-end MERN stack based e-commerce application with full user authentication, product management, cart, payment gateway integration, and admin dashboard.
 
 ---
 
