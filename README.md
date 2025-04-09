@@ -32,5 +32,19 @@ An end-to-end MERN (MongoDB, Express, React, Node.js) stack based e-commerce app
 
 ---
 
-## 📁 Project Structure
+✅ Todo / Coming Soon
+
+    🔐 payment gateway integration
+
+    📈 Admin dashboard with charts
+
+    📱 Mobile responsive improvements
+
+📄 License
+
+This project is licensed under the MIT License.
+
+💬 Contact
+
+Made with ❤️ by Rohit Keshri and Rakesh Kumar
 
