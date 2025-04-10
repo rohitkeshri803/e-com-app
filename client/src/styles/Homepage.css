@@ -1,0 +1,128 @@
+
+
+  /* Background for entire homepage */
+  body {
+    background: linear-gradient(to right, #d3c5b2 0%, #d2c6c2 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  
+  /* Container styles */
+  .home-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+
+  
+  /* Heading */
+  .home-page h1 {
+    color: #333;
+    font-family: "Playfair Display", serif;
+    margin-bottom: 20px;
+  }
+  
+  /* Card styles */
+  .home-page .card {
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 18rem;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .home-page .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .home-page .card-img-top {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top; /* 👈 focus on the top */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  
+  
+  /* Text in card */
+  .home-page .card-title {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .home-page .card-text {
+    color: rgb(90, 89, 89);
+  }
+  
+  /* Filter section */
+  .filters h4 {
+    margin-top: 100px;
+    color: #444 !important;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.337);
+  }
+  
+  .ant-checkbox-wrapper:first-of-type {
+    margin-left: 8px;
+  }
+  
+  .ant-checkbox-wrapper {
+    margin: 2px;
+  }
+  
+  .ant-radio-wrapper {
+    margin-bottom: 5px !important;
+    margin-left: 10px;
+  }
+  
+  /* Add to Cart Button */
+.home-page button {
+    background: linear-gradient(135deg, #00b894, #00cec9);
+    color: #fff;
+    border: none;
+    border-radius: 30px; /* 👈 Rounded pill shape */
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0.5px;
+    align-self: center;
+    box-shadow: 0 4px 12px rgba(0, 206, 201, 0.3);
+    width: fit-content;
+  }
+
+  .card-name-price {
+    display: flex;
+    justify-content: space-between; /* or center, if you want them centered */
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: nowrap; /* prevent wrapping */
+  }
+  
+
+  .home-page button:hover {
+    background: linear-gradient(135deg, #00cec9, #00b894);
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 206, 201, 0.4);
+  }
+  
+  
+  /* Load More */
+  .loadmore {
+    color: green;
+    font-weight: bold;
+    font-size: 20px !important;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
