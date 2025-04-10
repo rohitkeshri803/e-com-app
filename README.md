@@ -8,6 +8,8 @@ An end-to-end MERN stack based e-commerce application with full user authenticat
 
 ### 👤 User Features
 - User registration and login (JWT authentication)
+  ![image](https://github.com/user-attachments/assets/756df84b-5033-462b-bb36-611ac534d3b6)
+
 - Product browsing by category, brand, or search
 - Add to cart and checkout flow
 - Online payment integration
