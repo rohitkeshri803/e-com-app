@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from "react";
-import {Layout} from "./../components/Layout/Layout";
+import { Layout } from "./../components/Layout/Layout";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import "../styles/ProductDetailsStyles.css";
+import { useCart } from "../context/cart"; // or wherever your cart context is
+import { toast } from "react-hot-toast";
+
 
 const ProductDetails = () => {
   const params = useParams();
   const navigate = useNavigate();
   const [product, setProduct] = useState({});
   const [relatedProducts, setRelatedProducts] = useState([]);
+  const [cart, setCart] = useCart();
+
 
   //initalp details
   useEffect(() => {
@@ -62,7 +67,24 @@ const ProductDetails = () => {
             })}
           </h6>
           <h6>Category : {product?.category?.name}</h6>
-          <button class="btn btn-secondary ms-1">ADD TO CART</button>
+          <button
+            className="btn btn-secondary ms-1"
+            onClick={() => {
+              const exists = cart.find(item => item._id === product._id);
+              if (!exists) {
+                const updatedCart = [...cart, product];
+                setCart(updatedCart);
+                localStorage.setItem("cart", JSON.stringify(updatedCart));
+                toast.success("Item Added to cart");
+              } else {
+                toast("Item already in cart");
+              }
+            }}
+
+          >
+            ADD TO CART
+          </button>
+
         </div>
       </div>
       <hr />
@@ -100,18 +122,22 @@ const ProductDetails = () => {
                     More Details
                   </button>
                   <button
-                  className="btn btn-dark ms-1"
-                  onClick={() => {
-                    setCart([...cart, p]);
-                    localStorage.setItem(
-                      "cart",
-                      JSON.stringify([...cart, p])
-                    );
-                    toast.success("Item Added to cart");
-                  }}
-                >
-                  ADD TO CART
-                </button>
+                    className="btn btn-dark ms-1"
+                    onClick={() => {
+                      const exists = cart.find(item => item._id === p._id);
+                      if (!exists) {
+                        const updatedCart = [...cart, p];
+                        setCart(updatedCart);
+                        localStorage.setItem("cart", JSON.stringify(updatedCart));
+                        toast.success("Item Added to cart");
+                      } else {
+                        toast("Item already in cart");
+                      }
+                    }}
+                  >
+                    ADD TO CART
+                  </button>
+
                 </div>
               </div>
             </div>

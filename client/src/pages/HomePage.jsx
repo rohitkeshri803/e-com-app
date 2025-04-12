@@ -118,37 +118,44 @@ export const HomePage = () => {
       {/* banner image */}
       <div className="container-fluid row mt-3 home-page">
         <div className="col-md-3 filters">
-          <h4 className="text-center">Filter By Category</h4>
-          <div className="d-flex flex-column">
-            {categories?.map((c) => (
-              <Checkbox
-                key={c._id}
-                onChange={(e) => handleFilter(e.target.checked, c._id)}
-              >
-                {c.name}
-              </Checkbox>
-            ))}
+          <div className="filter-card shadow-sm p-3 mb-4 bg-white rounded">
+            <h4 className="text-center mb-3 text-primary">Filter By Category</h4>
+            <div className="d-flex flex-column gap-2">
+              {categories?.map((c) => (
+                <Checkbox
+                  key={c._id}
+                  onChange={(e) => handleFilter(e.target.checked, c._id)}
+                >
+                  {c.name}
+                </Checkbox>
+              ))}
+            </div>
           </div>
-          {/* price filter */}
-          <h4 className="text-center mt-4">Filter By Price</h4>
-          <div className="d-flex flex-column">
-            <Radio.Group onChange={(e) => setRadio(e.target.value)}>
+
+          <div className="filter-card shadow-sm p-3 mb-4 bg-white rounded">
+            <h4 className="text-center mb-3 text-success">Filter By Price</h4>
+            <Radio.Group
+              onChange={(e) => setRadio(e.target.value)}
+              className="d-flex flex-column gap-2"
+            >
               {Prices?.map((p) => (
-                <div key={p._id}>
-                  <Radio value={p.array}>{p.name}</Radio>
-                </div>
+                <Radio key={p._id} value={p.array}>
+                  {p.name}
+                </Radio>
               ))}
             </Radio.Group>
           </div>
-          <div className="d-flex flex-column">
+
+          <div className="text-center">
             <button
-              className="btn btn-danger"
+              className="btn  reset-btn w-100 mt-2"
               onClick={() => window.location.reload()}
             >
               RESET FILTERS
             </button>
           </div>
         </div>
+
         <div className="col-md-9 ">
           <h1 className="text-center">All Products</h1>
           <div className="d-flex flex-wrap">
@@ -182,12 +189,15 @@ export const HomePage = () => {
                     <button
                       className="btn btn-dark ms-1"
                       onClick={() => {
-                        setCart([...cart, p]);
-                        localStorage.setItem(
-                          "cart",
-                          JSON.stringify([...cart, p])
-                        );
-                        toast.success("Item Added to cart");
+                        const exists = cart.find(item => item._id === p._id);
+                        if (!exists) {
+                          const updatedCart = [...cart, p];
+                          setCart(updatedCart);
+                          localStorage.setItem("cart", JSON.stringify(updatedCart));
+                          toast.success("Item Added to cart");
+                        } else {
+                          toast("Item already in cart");
+                        }
                       }}
                     >
                       ADD TO CART
