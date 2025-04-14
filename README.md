@@ -3,7 +3,8 @@
 An end-to-end MERN stack based e-commerce application with full user authentication, product management, cart, payment gateway integration, and admin dashboard.
 
 ---
-![image](https://github.com/user-attachments/assets/3ae02808-786e-4bbf-8afe-8e4b6bdeb979)
+![image](https://github.com/user-attachments/assets/42e02546-23c6-4671-a3e5-3ef63685d2ec)
+
 
 ## 🚀 Features
 
