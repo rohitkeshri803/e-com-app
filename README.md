@@ -37,13 +37,6 @@ An end-to-end MERN stack based e-commerce application with full user authenticat
 
 ---
 
-✅ Todo / Coming Soon
-
-    🔐 payment gateway integration
-
-    📈 Admin dashboard with charts
-
-    📱 Mobile responsive improvements
 
 📄 License
 
