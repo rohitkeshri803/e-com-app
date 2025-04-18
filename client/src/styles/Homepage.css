@@ -62,25 +62,81 @@
     color: rgb(90, 89, 89);
   }
   
-  /* Filter section */
-  .filters h4 {
-    margin-top: 100px;
-    color: #444 !important;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.337);
+  /* Existing styles remain unchanged above this line... */
+
+/* =========✨ NEW FILTER SECTION STYLES ✨========= */
+
+/* Outer filter box styling */
+.filters {
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 50px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Card-like style for filter boxes */
+.filter-card {
+  background-color: #ffffff;
+  padding: 18px 15px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.filter-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Filter titles */
+.filter-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* Reset Button Enhancements */
+.reset-btn {
+  background: linear-gradient(135deg, #ff6b6b, #ee5253);
+  color: #931717;
+  font-weight: bold;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.reset-btn:hover {
+  background: linear-gradient(135deg, #ee5253, #ff6b6b);
+  transform: scale(1.05);
+  box-shadow: 0 5px 14px rgba(255, 107, 107, 0.3);
+}
+
+/* Spacing between checkboxes/radios */
+.ant-checkbox-wrapper,
+.ant-radio-wrapper {
+  padding-left: 10px;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Responsive improvements for mobile */
+@media (max-width: 768px) {
+  .filters {
+    margin-top: 20px;
   }
-  
-  .ant-checkbox-wrapper:first-of-type {
-    margin-left: 8px;
+  .filter-card {
+    padding: 15px 10px;
   }
-  
-  .ant-checkbox-wrapper {
-    margin: 2px;
+  .reset-btn {
+    width: 100%;
   }
-  
-  .ant-radio-wrapper {
-    margin-bottom: 5px !important;
-    margin-left: 10px;
-  }
+}
+
   
   /* Add to Cart Button */
 .home-page button {
@@ -126,3 +182,6 @@
     margin-top: 20px;
   }
   
+
+
+

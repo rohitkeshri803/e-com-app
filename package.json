@@ -16,7 +16,7 @@
   "dependencies": {
     "antd": "^5.24.6",
     "bcrypt": "^5.1.1",
-    "braintree-web-drop-in-react": "^1.2.1",
+    "braintree": "^3.29.0",
     "colors": "^1.4.0",
     "concurrently": "^9.1.2",
     "cors": "^2.8.5",
