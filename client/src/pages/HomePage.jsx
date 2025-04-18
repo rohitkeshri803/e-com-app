@@ -110,7 +110,7 @@ export const HomePage = () => {
     <Layout title={"ALl Products - Best offers "}>
       {/* banner image */}
       <img
-        src="/images/banner.png"
+        src="/images/banner2.png"
         className="banner-img"
         alt="bannerimage"
         width={"100%"}
